@@ -9,14 +9,9 @@ function solution(nums) {
     let canChoice = nums.length/2;
     
     nums.forEach(el => {obj[el] = true});
-    
     kinds = Object.keys(obj).length;
-    if(canChoice >= kinds){
-        answer = kinds;
-    }else{
-        answer = canChoice;
-    }
-    
+    if(canChoice >= kinds) answer = kinds;
+    else answer = canChoice;
     
     return answer;
 }
