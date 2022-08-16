@@ -1,17 +1,16 @@
 function solution(lottos, win_nums) {
   var answer = [0, 0];
   let result = [];
-  for (let i = 0; i < 6; i++) {
-    for (let j = 0; j < 6; j++) {
-      if (win_nums[i] === lottos[j]) {
-        answer[1]++;
-      }
+  for(let i of lottos){
+    if(win_nums.includes(i)){
+      answer[1]++;
     }
-    if (lottos[i] === 0) {
+    if(i === 0){
       answer[0]++;
     }
   }
   answer[0] += answer[1];
+    
   result = answer.map((el) => {
     if (el === 6) {
       return 1;
