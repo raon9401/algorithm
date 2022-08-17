@@ -1,5 +1,5 @@
 function solution(new_id) {
-  var reg = /[\{\}\[\]\/?,;:|\)*~`!^\+<>@\#$%&\\\=\(\'\"]/gi;
+  var reg = /[^\w-_.]/g;
   let result = "";
   // 1단계 new_id의 모든 대문자를 대응되는 소문자로 치환합니다.
   result = new_id.toLowerCase();
