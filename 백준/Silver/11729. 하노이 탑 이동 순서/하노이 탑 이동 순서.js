@@ -19,8 +19,7 @@ const hanoi = (num, from, to, other) => {
   count++;
   return count;
 };
-hanoi(N, 1, 3, 2);
-console.log(count);
+result += hanoi(N, 1, 3, 2) + "\n";
 for (let i of answer) {
   result += `${i[0]} ${i[1]}\n`;
 }
