@@ -9,7 +9,6 @@ N = Number(N); // 최대 수
 M = Number(M); // 반복 횟수
 
 let result = "";
-const visited = Array(N).fill(0); // 방문 한지 확인하는 배열
 const output = [];
 
 function dfs(cnt) {
@@ -19,13 +18,10 @@ function dfs(cnt) {
   }
 
   for (let i = 0; i < N; i++) {
-
-    visited[i] = 1;
     output.push(i + 1);
     dfs(cnt + 1);
 
     output.pop(); // 1 -> 2 -> 3 -> 4
-    visited[i] = 0;
   }
 }
 
