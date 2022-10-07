@@ -3,7 +3,7 @@ const input = require("fs")
   .toString()
   .trim()
   .split("\n");
-let N = +input[0];
+let N = input[0];
 let load = input[1].split(" ").map((el) => BigInt(el));
 let pay = input[2].split(" ").map((el) => BigInt(el));
 
